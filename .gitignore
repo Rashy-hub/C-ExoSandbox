@@ -1,0 +1,34 @@
+# Dossiers de build
+/bin/
+/obj/
+
+# Fichiers et dossiers spécifiques à Visual Studio / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Fichiers NuGet et dossiers de packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Cache de compilation ou de plugins (si utilisé par McMaster.NETCore.Plugins ou d'autres outils)
+PluginCache/
+dotnet-script/
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers temporaires et artefacts
+*.tmp
+*.temp
+TestResults/
+
+# Fichiers générés par l'OS
+.DS_Store
+Thumbs.db
