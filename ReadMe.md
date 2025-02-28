@@ -1,37 +1,67 @@
-# ExoSandbox
+# ExoSandbox 🏋️♂️
 
-While practicing C# exercises, I realized I needed a custom tool that could streamline the process. ExoSandbox is a modular, dynamic C# execution environment designed to centralize and run your code exercises in complete isolation through an interactive menu.
+A smart C# exercise manager with live-reload capabilities and boilerplate generation. Perfect for coding practice sessions!
+PS: Please add the 'Exercices' folder to your antivirus exceptions to ensure smooth functionality.
 
-## Features
+[![.NET Version](https://img.shields.io/badge/.NET-6.0+-%23512bd4)](https://dotnet.microsoft.com/)
+[![Spectre.Console](https://img.shields.io/badge/Spectre.Console-0.46.0-blue)](https://spectreconsole.net/)
 
-- Work in progress 🚧
-- 
+## Features ✨
 
-## Installation
+- **📂 Smart Exercise Management**
+  - Auto-discovers exercises in `/Exercises` directory
+  - Dynamic menu with arrow-key navigation
+  - Quick exit with dedicated "Quit" option
 
-To get started, ensure you have [Git](https://git-scm.com/) and the [.NET 7 SDK](https://dotnet.microsoft.com/download) (or higher) installed.
+- **⚡ Live Development Experience**
+  - Integrated `dotnet watch run` for instant feedback
+  - Cross-platform console output handling
+  - Clean process cancellation (Ctrl+C support)
+
+- **🚀 Project Scaffolding**
+  - Generates classic C# boilerplate (non-top-level statements)
+  - Automatic namespace handling
+  - Safe project isolation
+
+## Installation ⚙️
+
+**Prerequisites:**
+- .NET 6 SDK or newer
+- Terminal with ANSI support
 
 ```bash
-# Clone the repository
-git clone 
-
-# Change into the project directory
-cd ExoSandbox
-
-# Restore NuGet packages
+# Clone & Run
+git clone https://github.com/Rashy-hub/C-ExoSandbox.git
+cd C-ExoSandbox
 dotnet restore
+dotnet run
+```
 
-# Build the project
-dotnet build
+## Usage 🕹️
 
-# Run the projet
+```text
+Choose an exercise to run:
 
-dotnet watch run
+› MyExercise
+  Generate new exo boilerplate
+  Quit
+```
 
+## Key Controls:
 
-## Project Structure
+- ↑/↓ : Navigate menu
+- Enter : Confirm selection
+- Ctrl+C : Cancel current operation
+- Any key : Return to menu
 
-- **/Exercises**: Contains individual C# exercise files (*.cs) that are discovered at runtime.
-- **/Plugins**: Houses additional assemblies loaded dynamically.
-- **Program.cs**: The application entry point, managing menu display and dynamic code execution.
+## Project Structure:
 
+```text
+ExoSandbox/
+├── Exercises/               # Container for all exercises
+│   └── MyExercise/         # Individual exercise project
+│       ├── Program.cs      # Exercise entry point
+│       └── MyExercise.csproj
+├── Program.cs              # Main application logic
+└── ExoSandbox.csproj       # Project configuration
+```
