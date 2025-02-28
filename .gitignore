@@ -1,6 +1,6 @@
 # Dossiers de build
-/bin/
-/obj/
+bin/
+obj/
 
 # Fichiers et dossiers spécifiques à Visual Studio / VS Code
 .vs/
