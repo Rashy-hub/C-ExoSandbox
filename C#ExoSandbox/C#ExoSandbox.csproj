@@ -9,13 +9,18 @@
     <StartupObject>ExoSandbox.Program</StartupObject>
     <MainEntryPoint>ExoSandbox.Program</MainEntryPoint>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="McMaster.NETCore.Plugins" Version="2.0.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.13.0" />
     <PackageReference Include="Spectre.Console" Version="0.49.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(DesignTimeBuild)'=='true'">
+    <Compile Include="Exercises\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(DesignTimeBuild)'!='true'">
     <Compile Remove="Exercises\**\*.cs" />
   </ItemGroup>
 
